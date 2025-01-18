@@ -1,0 +1,57 @@
+\\Prog2
+name prog2;
+body 
+data integer32_t _aAAAAAAAAAAAAAAAA,_bBBBBBBBBBBBBBBBB,_cCCCCCCCCCCCCCCCC;
+scan _aAAAAAAAAAAAAAAAA;
+scan _bBBBBBBBBBBBBBBBB;
+scan _cCCCCCCCCCCCCCCCC;
+if(_aAAAAAAAAAAAAAAAA > _bBBBBBBBBBBBBBBBB)
+body
+	if(_aAAAAAAAAAAAAAAAA > _cCCCCCCCCCCCCCCCC)
+	body
+		goto Abigger;		
+	end
+	else
+	body
+		print _cCCCCCCCCCCCCCCCC;
+		goto Outofif;
+		Abigger:		
+		print _aAAAAAAAAAAAAAAAA;
+		goto Outofif;
+	end
+end	
+if(_bBBBBBBBBBBBBBBBB < _cCCCCCCCCCCCCCCCC)
+body
+	print _cCCCCCCCCCCCCCCCC;
+end	
+else
+body
+	print _bBBBBBBBBBBBBBBBB;
+end
+Outofif:	
+
+if((_aAAAAAAAAAAAAAAAA == _bBBBBBBBBBBBBBBBB) && (_aAAAAAAAAAAAAAAAA == _cCCCCCCCCCCCCCCCC) && (_bBBBBBBBBBBBBBBBB == _cCCCCCCCCCCCCCCCC))
+body
+	print 1;
+end	
+else
+body
+	print 0;
+end
+if((_aAAAAAAAAAAAAAAAA < 0) || (_bBBBBBBBBBBBBBBBB < 0) || (_cCCCCCCCCCCCCCCCC < 0))
+body
+	print -1;
+end	
+else
+body
+	print 0;
+end
+if(!!(_aAAAAAAAAAAAAAAAA < (_bBBBBBBBBBBBBBBBB + _cCCCCCCCCCCCCCCCC)))
+body
+	print(10);
+end	
+else
+body
+	print(0);
+end
+end
